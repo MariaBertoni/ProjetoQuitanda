@@ -47,6 +47,20 @@ def login():
     title="Login"
     return render_template("login.html",title=title)
 
+# ROTA DA PÁGINA ACESSO
+@app.route("/acesso", methods=['post'])
+def acesso():
+    global usuario, senha
+    usuario_informado = request.form["usuario"]
+    senha_informada = request.form["senha"]
+    if usuario == usuario_informado and senha == senha_informada:
+        session["login"] = True
+        return redirect('/adm')
+    else:
+        return
+    
+render_template("login.html",msg="Usuário/Senha estãovincorretos!")
+
 # FINAL DO CODIGO - EXECUTANDO O SERVIDOR
 app.run(debug=True)
 
