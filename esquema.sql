@@ -1,3 +1,7 @@
-from flask import Flask, render_template, request, redirect, session
-import sqlite3 as sql
-import uuid #gera um nome único para salvar as imagens
+CREATE TABLE IF NOT EXISTS produtos (
+    id_prod INTEGER PRIMARY KEY,
+    nome_prod TEXT NOT NULL,
+    desc_prod TEXT NOT NULL,
+    preco_prod TEXT NOT NULL,
+    img_prod TEXT NOT NULL
+);
