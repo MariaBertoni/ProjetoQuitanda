@@ -41,6 +41,12 @@ def index():
     title = "Home"
     return render_template("home.html", produtos=produtos,title=title)
 
+#ROTA DA PÁGINA LOGIN
+@app.route("/login")
+def login():
+    title="Login"
+    return render_template("login.html",title=title)
+
 # FINAL DO CODIGO - EXECUTANDO O SERVIDOR
 app.run(debug=True)
 
