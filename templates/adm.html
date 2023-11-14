@@ -6,7 +6,7 @@
     <div class="container text-center">
         <ul class="list-group mb-3 d-flex flex-row">
             <div class="row g-3">
-                {% if produto in produtos%}
+                {% for produto in produtos%}
                 <div class="col-12 col-md-10 col-lg-6 mx-auto">
                     <li class="list-group-item py-1 d-flex align-item-center" style="height: 220px;">
                         <div class="col-3 m-3 mh-100">
@@ -29,7 +29,7 @@
         {% endif %}
 
         <div class="container text-center">
-            <button type="button" onclick="window.location.href='/cadprodutos'" class="btn btn-lg btn-sucess mx-5">Cadastrar</button>
+            <button type="button" onclick="window.location.href='/cadprodutos'" class="btn btn-lg btn-success mx-5">Cadastrar</button>
             <button type="button" onclick="window.location.href='/logout'" class="btn btn-lg btn-danger mx-5">Sair</button>
         </div>
     

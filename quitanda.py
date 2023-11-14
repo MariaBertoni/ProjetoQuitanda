@@ -83,11 +83,11 @@ def logout():
     session.clear()
     return redirect('/')
 
-@app.route("/cadastro")
-def cadastro ():
+@app.route("/cadprodutos")
+def cadprodutos():
     if verifica_sessao():
         title = "Cadastro de produtos"
-        return render_template("cadastro.html",title=title)
+        return render_template("cadprodutos.html",title=title)
     else:
         return redirect("/login")
     
