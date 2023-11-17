@@ -1,26 +1,27 @@
 {% extends 'modelo.html' %}
 {% block conteudo %}
     {% if not produtos %}
-    <h1 class="text-center text-danger my-5">Não ha produtos cadastrados</h1>
+    <h1 class="text-center text-danger my-5">Não há produtos cadastrados</h1>
     {% else %}
     <div class="container text-center">
         <ul class="list-group mb-3 d-flex flex-row">
             <div class="row g-3">
-                {% for produto in produtos%}
+                {% for produto in produtos %}
                 <div class="col-12 col-md-10 col-lg-6 mx-auto">
-                    <li class="list-group-item py-1 d-flex align-item-center" style="height: 220px;">
-                        <div class="col-3 m-3 mh-100">
-                            <img src="../static/img/produtos/{{ produto['img_prod'] }}" class="img-tumbnail mh-100" />
+                    <li class="list-group-item py-1 d-flex align-items-center" style="height: 220px;">
+                        <div class="col-3 me-3 mh-100">
+                            <img src="../static/img/produtos/{{ produto['img_prod'] }}" class="img-thumbnail mh-100" />
                         </div>
-                            <div class="col-5">
-                                <h4 class="text-danger">{{ produto['nome_prod'] }}</h4>
-                                <h5 class="text-black">{{ produto['desc_prod'] }}</h4>
-                                <p class="text-danger fs-3"> R$ {{ produto['preco_prod'] }} </p>
-                            </div>
-                            <div class="col-5">
-                                <a href="/editprodutos/{{ produto['id_prod'] }}"> <i class="bi bi-pencil fs-3 ms-5" > </i> </a>
-                                <a href="/excluir/{{ produto['id_prod'] }}" onclick="return confirm('Você tem certeza que deseja excluir esse produto?')"> <i class="bi bi-trash3 fs-3" > </i> </a>
-                            </div>
+                        <div class="col-5">
+                            <h4 class="text-danger">{{ produto['nome_prod'] }}</h4>
+                            <h5 class="text-black">{{ produto['desc_prod'] }}</h4>
+                            <p class="text-danger fs-3">R$ {{ produto['preco_prod'] }}</p>
+                        </div>
+                        <div class="col">
+                            <a href="
+                            "><i class="bi bi-pencil-square fs-3" ></i></a>
+                            <a href="/excluir/{{ produto['id_prod'] }}" onclick="return confirm('Você tem certeza de que deseja excluir esse produto?')"><i class="bi bi-trash3 fs-3 ms-5" ></i></a>
+                        </div>
                     </li>
                 </div>
                 {% endfor %}

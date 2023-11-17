@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(img/verde.png);
+  }
+
+  .nossahistoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .car-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carrossel {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e5f1ee3;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px 10px #a4a4a4;
+    margin: 40px;
+
+  }
+
+  #carouselExampleCaptions{
+  width: 100%;
+  border: 10px double #1e5f1ee3;
+}
+
+.figure{
+  width: 200px;
+  height: 200px; 
+}
+
+.acordion {
+  width: 1000px;
+  height: 300px;
+}
+
+.valores {
+  display: flex;
+  justify-content: center;
+}
+footer{
+
+  width: 100% ;
+  margin-top:70px;
+}
+
